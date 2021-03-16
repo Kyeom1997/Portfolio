@@ -28,3 +28,18 @@ const scrollTo = document.querySelector(e);
 scrollTo.scrollIntoView({ behavior: "smooth" });
 
 };
+
+const contactMe = document.querySelector(".home__contact");
+contactMe.addEventListener("click", () => {
+    const scrollTo = document.querySelector('#contact');
+    scrollTo.scrollIntoView({ behavior: "smooth" });
+if(link == null) {
+    return;
+}
+contactMe.classList.remove("open");
+scrollIntoView(link);
+});
+function scrollIntoView(e) {
+const scrollTo = document.querySelector(e);
+scrollTo.scrollIntoView({ behavior: "smooth" });
+}  
