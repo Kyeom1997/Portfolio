@@ -472,6 +472,28 @@ p {
     transition: all var(--animation-duration) ease-in;
 }
 
+/* Scroll */
+
+.arrow-up {
+    position : fixed;
+    right : 50px;
+    bottom : 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    opacity: 0; /* display는 완전히 없어졌다 나타나는 것이기 때문에 opacity를 사용해야 함. */
+    transition: all var(--animation-duration) ease-in; 
+    pointer-events: none;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 @media screen and (max-width:768px) {
     .navbar__toggle-btn {
         display: block;
@@ -511,3 +533,4 @@ p {
         height: 80px;
     }
 }
+
