@@ -61,6 +61,7 @@ workBtnContainer.addEventListener('click', (e) => {
     if (filter == null) {
         return;
     }
+
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
         projects.forEach((project) => {
