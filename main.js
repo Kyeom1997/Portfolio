@@ -39,7 +39,26 @@ if(link == null) {
 contactMe.classList.remove("open");
 scrollIntoView(link);
 });
+
+
+// Make home slowly foad to transparent as the window scrolls down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
+
+
+
+
+
 function scrollIntoView(e) {
 const scrollTo = document.querySelector(e);
 scrollTo.scrollIntoView({ behavior: "smooth" });
 }  
+
